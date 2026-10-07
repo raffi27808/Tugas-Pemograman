@@ -20,7 +20,7 @@ int main() {
         IsTahunKabisat = 1;
     } else if (tahun % 100 == 0) {
         IsTahunKabisat = 0;
-    } else if (tahun % 4 ==0) {
+    } else if (tahun % 4 == 0) {
         IsTahunKabisat = 1;
     } else {
         IsTahunKabisat = 0;
