@@ -1,25 +1,39 @@
 #include <stdio.h>
 
 int main() {
-    int n;
-    printf("Jumlah data (n): "); // input jumlah data
-    scanf("%d", &n);
-    int data[n];
-    int IsDataSorted = 0;
-    int data_min, data_max;
-    float rata_rata;
+    int n = -1;
+    while (n < 0 || n > 80) {
+        printf("Jumlah nilai hanya boleh dari 0 sampai 80\n");
+        printf("Jumlah data (n): ");
+        scanf("%d", &n);
+    }
+    float jumlah[80];
 
-    // input array
     for (int i = 1; i <= n; i++) {
         printf("Data ke %d : ", i);
-        scanf("%d", &data[i]);
+        scanf("%f", &jumlah[i]);
+    }
+    float min = jumlah[1];
+    float max = jumlah[1];
+    float total;
+
+    for (int j = 1; j <= n; j++) {
+        if (jumlah[j] < min) {
+            min = jumlah[j];
+        }
+        if (jumlah[j] > max) {
+            max = jumlah[j];
+        }
     }
 
-        for (int j = 1; j <= n; j++) {
-            if (data[j] < data[j+1]) {
-                data_min = data[j];
-            }
-        }
-    printf("data min %d\n data max %d", data_min, data_max);
+    for (int k = 1; k <= n; k++) {
+        total += jumlah[k];
+    }
+
+    float rata = total / n;
+    printf("Nilai minimun: %.1f\n", min);
+    printf("Nilai maksimum: %.1f\n", max);
+    printf("Nilai rata-rata: %.2f\n", rata);
+
     return 0;
 }
