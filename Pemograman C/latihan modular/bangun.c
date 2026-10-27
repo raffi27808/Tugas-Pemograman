@@ -3,7 +3,7 @@
 
 float hitungLuas(float sisi) {
     float luas;
-    luas = sisi * 2;
+    luas = sisi * sisi;
     return luas;
 }
 
