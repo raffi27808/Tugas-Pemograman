@@ -21,5 +21,5 @@ int main(void) {
     // Memanggil fungsi RETURN
     rataRata = hitungRataRata(nilai1, nilai2,  nilai3);
 
-    printf("\nRata-rata = %.2f\ n", rataRata);
+    printf("\nRata-rata = %.2f\n", rataRata);
 }

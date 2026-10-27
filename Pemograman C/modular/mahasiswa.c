@@ -3,7 +3,7 @@
 
 // Fungsi Void
 void tampilkanNilai(float nilai) {
-    printf("Nilai = &.2f\n", nilai);
+    printf("Nilai = %.2f\n", nilai);
 }
 
 // Fungi Return
