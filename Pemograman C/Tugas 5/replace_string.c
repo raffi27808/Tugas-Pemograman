@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 char *ganti_karakter(char *data, char find, char replace) {
-    *ptr = data;
+    char *ptr = data;
     
     while (*ptr != '\0') {
         if (*ptr = find) {
@@ -9,6 +9,7 @@ char *ganti_karakter(char *data, char find, char replace) {
         }
         *ptr++;
     }
+    return data;
 }
 int main() {
     char string[100];
@@ -16,12 +17,12 @@ int main() {
     char replace;
 
     printf("Masukkan sebuah string: ");
-    fgets(str, sizeof(string), string);
+    fgets(string, sizeof(string), stdin);
     printf("Karakter yang dicari: ");
-    scanf("%c", &target);
+    scanf(" %c", &target);
     printf("Karakter pengganti: ");
-    scanf("%c", &replace);
+    scanf(" %c", &replace);
 
-    ganti_karakter(&string, target, replace);
+    printf( "%s", ganti_karakter(string, target, replace));
     return 0;
 }
