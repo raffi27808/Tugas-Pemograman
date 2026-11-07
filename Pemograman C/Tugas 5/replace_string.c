@@ -4,7 +4,7 @@ char *ganti_karakter(char *data, char find, char replace) {
     char *ptr = data;
     
     while (*ptr != '\0') {
-        if (*ptr = find) {
+        if (*ptr == find) {
             *ptr = replace;
         }
         *ptr++;
@@ -23,6 +23,6 @@ int main() {
     printf("Karakter pengganti: ");
     scanf(" %c", &replace);
 
-    printf( "%s", ganti_karakter(string, target, replace));
+    printf( "String hasil substitusi: %s", ganti_karakter(string, target, replace));
     return 0;
 }
